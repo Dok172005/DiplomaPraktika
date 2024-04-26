@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Band Ghost - Music</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="tour.html">Tour</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="legal.html">Legal</a></li>
+                <li><a href="history.html">History</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1>Music</h1>
+            <hr>
+            <p>Explore the music of The Band Ghost.</p>
+        
+            <!-- Albums section -->
+            <div class="albums">
+                <h2>Albums</h2>
+                <hr>
+                <!-- Block for each album with image and dropdown list -->
+                <div class="album">
+                    <select id="albumSelect" onchange="showAlbumInfo()">
+                        <option value="">Select an album</option>
+                        <option value="album1">Infestissumam</option>
+                        <option value="album2">If You Have Ghosts</option>
+                        <option value="album3">Meliora</option>
+                        <option value="album4">Prequelle</option>
+                        <option value="album5">Impera</option>
+                        <!-- Add more albums here -->
+                    </select>
+                </div>
+            </div>
+        
+            <!-- Информация об альбоме -->
+            <div id="albumInfo" class="hidden">
+                <img id="albumCover" src="" alt="Обложка альбома">
+                <ul id="songsList"></ul>
+            </div>
+        
+            <!-- Most Played Song section -->
+            <div class="most-played">
+                <h2>Most Played Song</h2>
+                <hr>
+                <p>The most frequently listened to song by The Band Ghost is: <span id="mostPlayedSongTitle">Mary On The Cross</span>.</p>
+                <audio controls id="mostPlayedSongAudio">
+                    <source src="Mary.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            
+        </div>        
+
+        <div class="chat">
+            <div class="chat-icon" onclick="toggleChat()">
+                <img src="chat.png" alt="Chat Icon">
+            </div>
+            <div class="chat-box" id="chatBox">
+                <div class="chat-header">
+                    <span class="close-btn" onclick="toggleChat()">&times;</span>
+                    <h3>Chat with Us</h3>
+                </div>
+                <div class="chat-body">
+                    <form id="chatForm">
+                        <textarea id="message" placeholder="Type your message here..." required></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="registration">
+            <div class="registration-icon" onclick="toggleRegistration()">
+                <img src="regist.png" alt="Registration Icon">
+            </div>
+            <div class="registration-box" id="registrationBox">
+                <div class="registration-header">
+                    <span class="close-btn" onclick="toggleRegistration()">&times;</span>
+                    <h3>Register</h3>
+                </div>
+                <div class="registration-body">
+                    <form id="registrationForm" onsubmit="registerUser(event)">
+                        <input type="text" id="username" placeholder="Username" required>
+                        <input type="email" id="email" placeholder="Email" required>
+                        <input type="password" id="password" placeholder="Password" required>
+                        <button type="submit">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
