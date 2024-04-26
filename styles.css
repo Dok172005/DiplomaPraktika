@@ -1,0 +1,311 @@
+body {
+    background-image: url('End.jpg'); /* Replace 'background.jpg' with your background image */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.menu {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    width: 120px; /* Уменьшаем ширину меню */
+    height: calc(100vh - 40px);
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    overflow-y: auto;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin-bottom: 1em; /* Используем относительные единицы для установки вертикального расстояния между элементами меню */
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2em; /* Используем относительные единицы для установки размера текста */
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    flex-grow: 1;
+    margin-right: 50px; /* Добавляем отступ справа */
+    margin-left: 170px; /* Добавляем отступ слева */
+    margin-bottom: 20px; /* Добавляем отступ снизу, чтобы было место между блоками */
+}
+
+/* Стиль для линии разделения */
+.content hr {
+    margin-top: 20px; /* Отступ перед линией разделения */
+    margin-bottom: 20px; /* Отступ после линии разделения */
+    border: none;
+    height: 1px;
+    background-color: #000000; /* Цвет линии разделения */
+}
+
+.chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.chat-icon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: #007bff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-icon img {
+    width: 70%;
+    height: auto;
+    display: block;
+}
+
+.chat-box {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 10px 10px 0 0;
+}
+
+.close-btn {
+    float: right;
+    cursor: pointer;
+}
+
+.chat-body {
+    padding: 10px;
+}
+
+#message {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.registration {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.registration-icon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: #007bff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration-icon img {
+    width: 70%;
+    height: auto;
+    display: block;
+}
+
+.registration-box {
+    display: none;
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.registration-header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 10px 10px 0 0;
+}
+
+.close-btn {
+    float: right;
+    cursor: pointer;
+}
+
+.registration-body {
+    padding: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.gallery-slider {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none; /* скрыть полосу прокрутки для Firefox */
+    -ms-overflow-style: none; /* скрыть полосу прокрутки для IE/Edge */
+    max-width: 75%; /* уменьшаем максимальную ширину слайдера до 90% ширины контейнера */
+    margin: 0 auto; /* выравниваем слайдер по центру */
+}
+
+.gallery-slider::-webkit-scrollbar {
+    display: none; /* hide scrollbar for Chrome, Safari, Opera */
+}
+
+.gallery-slider img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 10px;
+}
+
+.album {
+    margin-bottom: 20px;
+}
+
+.album img {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Стили для скрытия обложки альбома и списка песен при загрузке страницы */
+.hidden {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+#team-section {
+    text-align: center;
+}
+
+.team-slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.team-member {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.team-member p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.team-slider {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-member.active {
+    border: 2px solid #ff4500;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для слайдера */
+.swiper {
+    overflow: hidden;
+    width: 100%; /* изменено значение ширины на 90% */
+    margin: 0 auto; /* центрирование слайдера по горизонтали */
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+#filterForm button {
+    padding: 10px 20px;
+    background-color: #ADA9BA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#filterForm button:hover {
+    background-color: #ADA9BA;
+}
